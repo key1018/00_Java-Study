@@ -83,7 +83,8 @@ public class A_Variable {
 
 			boolean bool = true; // 변수의 "선언과 대입"
 			
-			System.out.println(bool);
+			System.out.println(bool); // true
+			System.out.println(!bool); // false
 			
 		}
 	

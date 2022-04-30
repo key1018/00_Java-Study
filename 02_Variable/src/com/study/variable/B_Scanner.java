@@ -94,10 +94,10 @@ public class B_Scanner {
 		System.out.println("[조건4] x % y 의 값이 2이 된다");
 
 		System.out.println();
-		System.out.println("1_1. 첫 번째 숫자를 입력하세요");
+		System.out.println("1_1. 첫 번째 숫자를 입력하세요"); // 23
 		int num1 = sc.nextInt();
 		sc.nextLine();
-		System.out.println("1_2. 두 번째 숫자를 입력하세요");
+		System.out.println("1_2. 두 번째 숫자를 입력하세요"); // 7
 		int num2 = sc.nextInt();
 		sc.nextLine();
 
@@ -136,9 +136,9 @@ public class B_Scanner {
 		System.out.println(str.charAt(4));
 		System.out.println();
 
-		System.out.println("index(10)의 알파벳은?");
-		System.out.println(str.charAt(10));
-		// 만약 데이터의 길이가 index(10)까지 안된다면 오류가 난다.
+		System.out.println("index(6)의 알파벳은?");
+		System.out.println(str.charAt(6));
+		// 만약 데이터의 길이가 index(6)까지 안된다면 오류가 난다.
 
 	}
 

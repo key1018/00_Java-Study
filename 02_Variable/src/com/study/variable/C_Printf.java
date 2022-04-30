@@ -86,13 +86,13 @@ public class C_Printf {
 		double weight = sc.nextDouble();
 		sc.nextLine();
 
-		System.out.print("하고있는 운동이 있나요(Y/N)?");
+		System.out.print("하고있는 운동이 있나요(Y/N)? ");
 		char what = sc.nextLine().charAt(0);
 
-		System.out.print("무슨 운동을 하고 있나요?");
+		System.out.print("무슨 운동을 하고 있나요? ");
 		String exercise = sc.nextLine();
 
-		System.out.print("일주일 중 운동하는 일은 며칠인가요?");
+		System.out.print("일주일 중 운동하는 일은 며칠인가요? ");
 		int time = sc.nextInt();
 		sc.nextLine();
 
