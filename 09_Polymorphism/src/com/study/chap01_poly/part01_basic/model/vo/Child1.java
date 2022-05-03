@@ -1,4 +1,4 @@
-package com.br.chap01_poly.part01_basic.model.vo;
+package com.study.chap01_poly.part01_basic.model.vo;
 
 public class Child1 extends Parent{
 	
@@ -24,5 +24,10 @@ public class Child1 extends Parent{
 	public void printChild1() {
 		System.out.println("난 자식1클래스야 ");
 	}
-
+	
+	
+	@Override
+	public void print() {
+		System.out.println("나는 첫째야 내가 짱이야");
+	}
 }

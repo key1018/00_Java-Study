@@ -1,4 +1,4 @@
-package com.br.chap01_poly.part01_basic.model.vo;
+package com.study.chap01_poly.part01_basic.model.vo;
 
 public class Parent /*extends Object*/ {
 
@@ -32,6 +32,10 @@ public class Parent /*extends Object*/ {
 	
 	public void printParent() {
 		System.out.println("난 부모클래스야");
+	}
+	
+	public void print() {
+		System.out.println("나 부모니까 잘해");
 	}
 	
 	
