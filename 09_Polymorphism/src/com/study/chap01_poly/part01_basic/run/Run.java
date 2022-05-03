@@ -14,7 +14,7 @@ public class Run {
 		System.out.println("1. 부모타입 레퍼런스로 부모객체를 다르는 경우");
 		Parent p1 = new Parent();
 		p1.printParent(); // 부모타입 레퍼런스로 부모타입 클래스에 접근 가능
-//		p1.printChild1(); // 부모타입 레퍼런스로 부모타입 클래스에 접근 불가능
+//		p1.printChild1(); // 부모타입 레퍼런스로 자식타입 클래스에 접근 불가능
 		
 		System.out.println("2. 자식타입 레퍼런스로 자식개체를 다르는 경우");
 		Child1 c1 = new Child1();
