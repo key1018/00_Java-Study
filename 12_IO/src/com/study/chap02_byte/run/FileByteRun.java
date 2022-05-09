@@ -8,7 +8,8 @@ public class FileByteRun {
 
 		FileByteDao dao = new FileByteDao();
 		
-		dao.fileSave();
+//		dao.fileSave();
+		dao.fileRead();
 
 	}
 
