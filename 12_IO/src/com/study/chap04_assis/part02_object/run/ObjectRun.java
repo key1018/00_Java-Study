@@ -15,7 +15,7 @@ public class ObjectRun {
 		ObjectArrayDao oad = new ObjectArrayDao();
 		
 //		oad.fileSave();
-		oad.fileRead();
+//		oad.fileRead();
 	}
 
 }
