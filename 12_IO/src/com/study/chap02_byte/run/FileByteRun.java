@@ -9,7 +9,7 @@ public class FileByteRun {
 		FileByteDao dao = new FileByteDao();
 		
 //		dao.fileSave();
-		dao.fileRead();
+//		dao.fileRead();
 
 	}
 
