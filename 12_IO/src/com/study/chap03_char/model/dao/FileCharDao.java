@@ -59,6 +59,16 @@ public class FileCharDao {
 		}
 		*/
 		
+		// try ~ with ~ resource 구문으로 자원반납까지 자동으로 진행(JDK7버전 이상부터 사용 가능)
+		/*
+		 * try(try블럭내에서 사용한 스트림객체 생성 구문){ // ()안에 생성된 스트림 객체 다 사용된 후 자동으로 반납처리해줌
+		 * 
+		 * } catch (예외클래스 e) {
+		 * 
+		 * }
+		 */
+		
+		
 		// ***** try ~ with ~ resource 구문으로 자원반납까지 자동으로 진행
 
 		File folder = new File("C:\\Users\\dski2\\OneDrive\\Desktop\\folder");

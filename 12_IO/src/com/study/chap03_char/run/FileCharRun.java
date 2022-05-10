@@ -1,6 +1,7 @@
 package com.study.chap03_char.run;
 
 import com.study.chap03_char.model.dao.FileCharDao;
+import com.study.chap03_char.model.dao.FileCharDao2;
 
 public class FileCharRun {
 
@@ -9,7 +10,12 @@ public class FileCharRun {
 		FileCharDao dao = new FileCharDao();
 		
 //		dao.fileSave();
-		dao.fileReader();
+//		dao.fileReader();
+		
+		FileCharDao2 dao2 = new FileCharDao2();
+		
+//		dao2.fileSave();
+		dao2.fileRead();
 	}
 
 }
