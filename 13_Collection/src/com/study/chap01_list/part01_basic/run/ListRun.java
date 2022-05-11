@@ -1,6 +1,7 @@
 package com.study.chap01_list.part01_basic.run;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.study.chap01_list.part01_basic.model.vo.Music;
 
@@ -112,6 +113,57 @@ public class ListRun {
 		System.out.println(m);
 		
 		
+		// 7. subList(int index1, int index2) : List<E> => index1에서부터 index2이전까지 데이터를 추출해서 새로운 List로 반환
+		List sub = list.subList(0,3); // 0 <=   < 3
+		// List는 interface로 객체생성은 불가, 레퍼런스 변수로는 생성 가능
+		System.out.println(sub);
+		
+
+		// 8. addAll(Collection c) : 컬렉션에 있는 모든 데이터를 통채로 뒤에 추가시켜주는 메소드
+		list.addAll(sub); // sub에 담겨있는 데이터 list뒤에 추가됨
+		System.out.println(list);
+		
+		
+		// 9. isEmpty() : boolean	=> 컬력센이 비어있는지 물어보는 메소드
+		// 비어있으면 true, 채워져있으면 false반환
+		System.out.println(list.isEmpty()); // false
+		
+		if(list.isEmpty()) {
+			System.out.println("현재 리스트는 비워져있습니다.");
+		} else {
+			System.out.println("현재 리스트는 채워져있습니다.");
+		}
+		
+		
+		// 10. clear() : 싹 비워주는 메소드
+		
+//		list.clear();
+//		System.out.println(list);
+//		
+//		if(list.isEmpty()) {
+//			System.out.println("현재 리스트는 비워져있습니다.");
+//		} else {
+//			System.out.println("현재 리스트는 채워져있습니다.");
+//		}
+		
+		
+		System.out.println("================================================");
+		
+		// list 안에 얼마만큼의 데이터가 들어있는지 모르는 경우
+		// 반복문 활용해서 출력 => 컬력센의 경우 데이터의 크기 : size()로 파악
+		
+		// for loop반복문 활용하기
+		for(int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+		
+		System.out.println("================================================");
+		
+		// for each반복문을 활용하여 출력
+		for(Object o : list) { // 제네릭을 설정안했기때문에 기본값인 Object로 설정해야함
+			System.out.println(o);
+		}
+
 	}
 
 }
