@@ -29,7 +29,7 @@ public class HashSetRun {
 		
 		HashSet<String> hs1 = new HashSet<>(); // 제네릭설정이 안되어있는 경우 : <E> = Object 타입
 		
-		// List와 같이 Collection에 포함되어있으므로 사용하는 메소드도 동일하다
+		// List와 같이 Collection에 상속되어있으므로 사용하는 메소드도 동일하다
 		
 		// add(E e)
 		hs1.add("안녕하세요"); // Object 타입이므로 문자열 저장가능
