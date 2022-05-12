@@ -110,9 +110,9 @@ public class HashMapRun {
 
 		// 3) while반복문 활용하여 출력하기
 		while (entryIt.hasNext()) {
-			Entry<String, Snack> e = entryIt.next();
+			Entry<String, Snack> e = entryIt.next(); // iterator에 들어가있는 key+value 값을 Entry에 넣기
 //			System.out.println(e);
-			System.out.println(e.getKey() + "=" + e.getValue());
+			System.out.println(e.getKey() + "=" + e.getValue()); // Entry에 담겨있는 getKey()와 getValue() 값 호출하기
 		}
 
 	}
