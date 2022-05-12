@@ -47,6 +47,7 @@ public class MusicController {
 			if ((list.get(i).getTitle()).equals(str) || (list.get(i).getArtist()).equals(str)) {
 				list.remove(i);
 				result++;
+				break; 
 			}
 		}
 		return result;
