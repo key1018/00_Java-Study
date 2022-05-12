@@ -40,7 +40,8 @@ public class MusicController {
 	// 3. 특정 곡 삭제 요청 처리
 	public int delectMusic(String str) { // delectMusic 메소드 시작
 		
-		/*
+		// 삭제는 신중하게해야하므로 equals를 활용하는것이 좋다
+		
 		int result = 0; // 제대로 삭제됐는지 확인하는 변수
 		for (int i = 0; i < list.size(); i++) {
 			if ((list.get(i).getTitle()).equals(str) || (list.get(i).getArtist()).equals(str)) {
@@ -49,8 +50,8 @@ public class MusicController {
 			}
 		}
 		return result;
-		*/
 		
+		/*
 		// contains로 확인하기
 		int result = 0; // 제대로 삭제됐는지 확인하는 변수
 		for (int i = 0; i < list.size(); i++) {
@@ -59,8 +60,10 @@ public class MusicController {
 				result++;
 			}
 		}
+		
 		return result;
-
+		*/
+		
 	} // delectMusic 메소드 끝
 	
 	
