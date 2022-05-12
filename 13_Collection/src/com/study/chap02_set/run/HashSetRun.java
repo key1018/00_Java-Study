@@ -103,8 +103,9 @@ public class HashSetRun {
 		// while반복문을 활용하여 출력
 		while (it.hasNext()) { // it값에 값이 담겨있으면 true를 반환하여 반복문 실행
 //			System.out.println(it.next());
-			Student s = it.next();
-			System.out.println(s);
+//			Student s = it.next(); // Student 타입에 iterator에 담겨있는 각 객체들 저장
+//			System.out.println(s);
+			System.out.println(it.next());
 		} // it값에 값이 담겨져있지 않아서 false가 되면 반복문 종료
 
 //		it.next(); // NoSuchElementException 예외 발생 => next()는 실행되면 StringToken처럼 하나하나빠지면 완전히 빠지는 개념 => 다 뽑으면 더이상 못 뽑음

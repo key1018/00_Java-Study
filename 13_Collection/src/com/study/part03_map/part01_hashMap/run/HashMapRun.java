@@ -95,7 +95,7 @@ public class HashMapRun {
 		// 3) while반복문 활용하여 출력하기
 		while (it.hasNext()) {
 			String key = it.next(); // iterator에 들어가있는 key값을 String 변수에 넣기
-			Snack value = hm.get(key); // Snack객체에 get메소드를 활용하여 key값에 따른 객체 넣기
+			Snack value = hm.get(key); // Snack객체에 get메소드를 활용하여 key값에 따른 객체 넣기 => get메소드는 key값을 통해서 해당 객체 출력
 			System.out.println(key + "=" + value); // 출력
 		}
 		
