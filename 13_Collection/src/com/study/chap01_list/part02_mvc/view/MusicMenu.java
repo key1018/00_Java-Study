@@ -34,7 +34,7 @@ public class MusicMenu {
 		case 2 : selectMusic(); break;
 		case 3 : delectMusic(); break;
 		case 4 : searchMusic(); break;
-		case 5 : /*modifyMusic();*/ break;
+		case 5 : updateMusic(); break;
 		case 0 : System.out.println("프로그램을 종료합니다."); return;
 		default : System.out.println("잘못 선택하셨습니다. 다시 선택해주세요."); break;
 		}
@@ -42,7 +42,9 @@ public class MusicMenu {
 	}
 } // mainMenu 메소드 끝
 	
-	// 1. 새로운 곡 추가하는 서브화면
+	/**
+	 * 1. 새로운 곡 추가하는 서브화면
+	 */
 	public void insertMusic() { // insertMusic 메소드 시작
 		
 		// 새로운 곡 추가받을 값 입력받기
@@ -71,7 +73,9 @@ public class MusicMenu {
 	
 	
 	
-	// 2. 전체 곡 조회하는 서브화면
+	/**
+	 * 2. 전체 곡 조회하는 서브화면
+	 */
 	public void selectMusic() { // selectMusic 메소드 시작
 		
 		System.out.println("\n=== 전체 곡 리스트 ===");
@@ -92,7 +96,9 @@ public class MusicMenu {
 	} // selectMusic 메소드 끝
 	
 	
-	// 3. 특정 곡 삭제하는 서브화면
+	/**
+	 * 3. 특정 곡 삭제하는 서브화면
+	 */
 	public void delectMusic() { // delectMusic 메소드 시작
 		
 		System.out.println("\n=== 특정 곡 삭제 ===");
@@ -114,7 +120,9 @@ public class MusicMenu {
 	
 	
 	
-	// 4. 특정 곡 검색하는 서브화면
+	/**
+	 * 4. 특정 곡 검색하는 서브화면
+	 */
 	public void searchMusic() { // searchMusic 메소드 시작
 		
 		
@@ -135,5 +143,52 @@ public class MusicMenu {
 		}
 
 	} // searchMusic 메소드 끝
+
+	
+	/**
+	 * 5. 특정 곡 수정하는 서브화면
+	 */
+	public void updateMusic() { // updateMusic 메소드 시작
+
+		System.out.println("\n=== 특정 곡 수정 ===");
+		
+
+		// 1) 수정하고자하는 노래를 곡명으로 검색받기
+		System.out.print("수정하고자하는 기존의 곡명 : ");
+		String title = sc.nextLine()
+				;
+		// 2) 수정되기 전 노래의 값만 받기
+		ArrayList<Music> list = mc.updateMusic(title);
+
+		// 3) 수정사항을 곡명, 가수명 함께 작성하기
+		System.out.println("수정 내용(곡명, 가수명) : ");
+		String update = sc.nextLine();
+		
+		// *** 4) 수정 전 곡 for반복문 활용하여 출력하기 *** 순서중요!!
+		// result값을 통해서 값들이 변경되기 전에 미리 앞에서 입력해서 기존의 곡 출력하기
+		System.out.println("\n=== 수정 전 곡 ====");
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+
+		// 5) int 자료형에서 result 값 받아오기
+		// result변수가 선언되면 사용자가 입력한 값으로 수정됨
+		int result = (int) mc.updateMusic(title, update);
+
+		// 6) result 값을 확인하여 결과값 추출
+		// result = 1 (성공적으로 수정) | result = 0 (수정안됨)
+		if (result > 0) {
+			System.out.println("성공적으로 수정했습니다.");
+			System.out.println("\n=== 수정 후 곡 ====");
+			// *** 7) for반복문을 활용해서 수정된 곡 출력 *** 순서 중요!!!
+			for (int i = 0; i < list.size(); i++) {
+				System.out.println(list.get(i));
+			}
+
+		} else {
+			System.out.println("수정할 곡을 찾지못했습니다.");
+		}
+
+	} // updateMusic 메소드 끝
 
 }
