@@ -1,10 +1,10 @@
-package list.view;
+package com.test1.list.view;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import list.controller.BookController;
-import list.model.vo.Book;
+import com.test1.list.controller.BookController;
+import com.test1.list.model.vo.Book;
 
 public class BookMenu {
 	

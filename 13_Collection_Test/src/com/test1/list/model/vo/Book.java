@@ -1,4 +1,4 @@
-package list.model.vo;
+package com.test1.list.model.vo;
 
 public class Book {
 	

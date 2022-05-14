@@ -1,6 +1,6 @@
-package list.run;
+package com.test1.list.run;
 
-import list.view.BookMenu;
+import com.test1.list.view.BookMenu;
 
 public class Run {
 

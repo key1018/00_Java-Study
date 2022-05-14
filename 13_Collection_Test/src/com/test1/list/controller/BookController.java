@@ -1,9 +1,9 @@
-package list.controller;
+package com.test1.list.controller;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-import list.model.vo.Book;
+import com.test1.list.model.vo.Book;
 
 public class BookController {
 	
