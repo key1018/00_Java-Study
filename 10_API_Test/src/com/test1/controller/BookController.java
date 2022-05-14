@@ -1,12 +1,10 @@
-package controller;
+package com.test1.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.StringTokenizer;
 
-import javax.swing.text.html.StyleSheet.ListPainter;
-
-import model.vo.Book;
+import com.test1.model.vo.Book;
 
 public class BookController {
 	
@@ -123,11 +121,7 @@ public class BookController {
 				System.out.println(list[i]);
 			}
 		}
-		
-		
+
 	}
-	
-	
-	
 
 }

@@ -1,8 +1,8 @@
-package run;
+package com.test1.run;
 
 import java.util.Scanner;
 
-import controller.BookController;
+import com.test1.controller.BookController;
 
 public class Run {
 	
