@@ -31,7 +31,7 @@ public class ScannerRun {
 				String book = sc.nextLine();
 				System.out.print("대여일 (2011-12-01 과 같이 '-'구분자를 이용하여 입력하시오) : ");
 				String rentalDate = sc.nextLine();
-				System.out.print("반나일 (2011-12-01 과 같이 '-'구분자를 이용하여 입력하시오) : ");
+				System.out.print("반납일 (2011-12-01 과 같이 '-'구분자를 이용하여 입력하시오) : ");
 				String returnDate = sc.nextLine();
 				System.out.print("가격 : ");
 				int price = sc.nextInt();
@@ -60,8 +60,8 @@ public class ScannerRun {
 						calDate = Math.abs(calDate) / (24 * 60 * 60 * 1000);
 						// 차이값을 절대값으로 출력 후 (24 * 60 * 60 * 1000)로 나누어서 일수로 결과값이 나오도록 설정
 						sum = (int) (l[j].getPrice() * l[j].getLateCharges() * calDate);
-						// j의 수에 따라 연체일이 다르게 나오도록 설정
-						System.out.println(l[j] + ",  연체일 : " + calDate + "일" + ",  연체료 : " + sum + "원");
+						// j의 수에 따라 대여일이 다르게 나오도록 설정
+						System.out.println(l[j] + ",  대여일 : " + calDate + "일" + ",  대여료 : " + sum + "원");
 						// 사용자가 입력한 총 결과값 count수 만큼 출력
 					}
 					break; // n를 입력했으니 break문을 통해 반복문으로 출력한 후 빠져나도록 설정
