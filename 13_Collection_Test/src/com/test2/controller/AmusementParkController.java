@@ -15,7 +15,32 @@ public class AmusementParkController {
 	list.add(new AmusementPark("이지은", 12, "어린이 회원", 0.5));
 
 	}
+	/**
+	 * 0_1. 로그인을 위한 아이디 입력 요청 처리
+	 * @param userId 로그인을 위한 사용자의 아이디
+	 * @return 사용자의 아이디
+	 */
+	public String loginID(String userId) {
+
+		String id = "key1018";
+
+		return id;
+
+	}
 	
+	/**
+	 * 0_2. 로그인을 위한 비밀번호 입력 요청 처리
+	 * @param userPw 로그인을 위한 사용자의 비밀번호
+	 * @return 사용자의 비밀번호
+	 */
+	public String loginPw(String userPw) {
+
+		String pw = "12345d!";
+
+		return pw;
+
+	}
+
 	/**
 	 * 1. 회원 정보 추가 요청 처리
 	 * @param name : 추가하는 회원명

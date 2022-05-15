@@ -9,7 +9,7 @@ public class Run {
 		
 		AmusementParkView ap = new AmusementParkView();
 		
-		ap.mainMenu();
+		ap.login();
 		
 		
 		

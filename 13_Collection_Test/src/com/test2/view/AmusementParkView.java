@@ -11,36 +11,65 @@ public class AmusementParkView {
 	AmusementParkController amc = new AmusementParkController();
 	Scanner sc = new Scanner(System.in);
 	
+	/**
+	 * 사용자의 로그인 View
+	 */
+	public void login() {
+
+		while (true) {
+
+			System.out.print("아이디를 입력하세요 : ");
+			String userId = sc.nextLine();
+			System.out.print("비밀번호를 입력하세요 : ");
+			String userPw = sc.nextLine();
+
+			String id = amc.loginID(userId);
+			String pw = amc.loginPw(userPw);
+
+			if (userId.equals(id) && userPw.equals(pw)) {
+				mainMenu();
+			} else if (userId.equals(id)) {
+				System.out.println("비밀번호가 틀렸습니다.");
+			} else if (userPw.equals(pw)) {
+				System.out.println("아이디가 틀렸습니다.");
+			} else {
+				System.out.println("로그인에 실패했습니다.");
+			}
+			System.out.println();
+		}
+		
+	}
+
 	public void mainMenu() {
 		
 		while(true) {
-			
-			System.out.println("=== 농농놀이동산 회원 정보 메뉴판(사내용) ===\n");
+
+			System.out.println("\n=== 농농놀이동산 회원 정보 메뉴판(사내용) ===\n");
+
+			System.out.println("1. 회원 정보 추가");
+			System.out.println("2. 전체 회원 정보 조회");
+			System.out.println("3. 회원 정보 검색");
+			System.out.println("4. 회원 정보 삭제");
+			System.out.println("5. 회원 정보 수정");
+			System.out.println("0. 로그아웃");
+
+			System.out.print("\n>> 메뉴를 선택하세요 : ");
+			int menu = sc.nextInt();
+			sc.nextLine();
 		
-		System.out.println("1. 회원 정보 추가");
-		System.out.println("2. 전체 회원 정보 조회");
-		System.out.println("3. 회원 정보 검색");
-		System.out.println("4. 회원 정보 삭제");
-		System.out.println("5. 회원 정보 수정");
-		System.out.println("0. 프로그램 종료");
-		
-		System.out.print("\n>> 메뉴를 선택하세요 : ");
-		int menu = sc.nextInt();
-		sc.nextLine();
-		
-		switch(menu) {
-		case 1 : insertMember(); break;
-		case 2 : selectMember(); break;
-		case 3 : searchMember(); break;
-		case 4 : delectMember(); break;
-		case 5 : updateMember(); break;
-		case 0 : System.out.println("프로그램을 종료합니다."); return;
-		default : System.out.println("메뉴를 다시 선택해주세요.");
+			switch(menu) {
+			case 1 : insertMember(); break;
+			case 2 : selectMember(); break;
+			case 3 : searchMember(); break;
+			case 4 : delectMember(); break;
+			case 5 : updateMember(); break;
+			case 0 : System.out.println("프로그램을 종료합니다."); return;
+			default : System.out.println("메뉴를 다시 선택해주세요.");
+			}
+
 		}
 
 	}
-
-}
 	
 	/**
 	 * 1. 회원 정보 추가 View
