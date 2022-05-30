@@ -49,9 +49,8 @@ public class AmusementParkController {
 	 * @param discount : 추가하는 회원 할인율
 	 * @return : 추가된 회원 정보 출력
 	 */
-	public ArrayList<AmusementPark> insertMember(String name, int age, String membership, String discount) {
-		
-		Double memberDiscount = 0.0;
+	public ArrayList<AmusementPark> insertMember(String name, int age, String membership, double discount) {
+
 		
 		if(age <= 13) {
 			membership = "어린이 회원";
@@ -62,12 +61,12 @@ public class AmusementParkController {
 		}
 		
 		switch(membership) {
-		case "어린이 회원" : memberDiscount = 0.5; break;
-		case "청소년 회원" : memberDiscount = 0.3; break;
-		case "성인 회원" : memberDiscount = 0.2; break;
+		case "어린이 회원" : discount = 0.5; break;
+		case "청소년 회원" : discount = 0.3; break;
+		case "성인 회원" : discount = 0.2; break;
 		}
 		
-		list.add(new AmusementPark(name, age, membership, memberDiscount));
+		list.add(new AmusementPark(name, age, membership, discount));
 		
 		return list;
 	}
@@ -154,8 +153,8 @@ public class AmusementParkController {
 	public int updateMember(String name, String update) {
 
 		StringTokenizer st = new StringTokenizer(update, ",");
-		int result = 0;
-		int age = 0;
+		int result = 0; // 결과값을 반환할 변수
+		int age = 0; // 회원들의 나이를 담을 변수
 
 		for (int i = 0; i < list.size(); i++) {
 			AmusementPark park = list.get(i);

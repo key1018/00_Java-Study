@@ -86,7 +86,7 @@ public class AmusementParkView {
 		// 멤버십
 		String membership = "";
 		// 회원 할인율
-		String discount = "";
+		double discount = 0.0;
 		
 
 		ArrayList<AmusementPark> list = amc.insertMember(name, age, membership, discount);
@@ -179,11 +179,12 @@ public class AmusementParkView {
 		// 수정 전 회원 정보 출력
 		for(int i = 0; i < updateList.size(); i++) {
 			if((updateList.get(i).getName()).equals(name)) {
+				System.out.println("\n수정하고자하는 회원 정보");
 				System.out.println(updateList.get(i));
 			}
 		}
 		
-		System.out.println();
+		System.out.println(); // 띄어쓰기
 		
 		int result = amc.updateMember(name, update);
 		
