@@ -1,6 +1,9 @@
 package com.study.codeup;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class CodeTest {
 
@@ -24,7 +27,7 @@ public class CodeTest {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println((i + 1) + "번째 숫자 : " + arr[i]);
 		}
-		*/
+		
 		
 		// 1024번
 		
@@ -38,8 +41,7 @@ public class CodeTest {
 			System.out.println("'" + s.charAt(i) + "'");
 		}
 		
-		// 1025번
-		
+		// 1025번	
 		
 		// 방법 1.
 		// 다섯 자리의 정수 문자열로 입력받기
@@ -58,7 +60,6 @@ public class CodeTest {
 			System.out.println("[" + arr[i] * (int)Math.pow(10, arr.length - (i+1)) + "]");
 		}
 		
-		
 		// 방법 2.
 		System.out.print("다섯자리의 정수 입력 : ");
 		int i = sc.nextInt(); // 75254
@@ -74,6 +75,56 @@ public class CodeTest {
 		System.out.println("[" + num3 + "]");
 		System.out.println("[" + num2 + "]");
 		System.out.println("[" + num + "]");
+		
+		*/
+		
+		// 1026번
+		System.out.print("시간(시/분/초) : ");
+		String time = sc.nextLine();
+
+		String[] arr = new String[3];
+		
+		// StringTokenizer로 ":"마다 데이터 끊어주기
+		StringTokenizer stk = new StringTokenizer(time, ":");
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = stk.nextToken();
+		}
+		System.out.println("분 : " + arr[1]);
+		
+		
+		// 1027번
+		
+		// 방법 1.
+		System.out.print("날짜 : ");
+		String date = sc.nextLine();
+		
+		StringTokenizer stn = new StringTokenizer(date, ".");
+		
+		Date d = new Date();
+		
+		d.setYear(Integer.parseInt(stn.nextToken()) - 1900);
+		d.setMonth(Integer.parseInt(stn.nextToken()) - 1);
+		d.setDate(Integer.parseInt(stn.nextToken()));
+		
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		String format = sdf.format(d);
+		
+		System.out.println(format);
+		
+		// 방법 2.
+		
+		System.out.print("날짜 : ");
+		String date = sc.nextLine();
+
+		String[] arr = date.split("\\.");
+
+		int year = Integer.parseInt(arr[0]);
+		int month = Integer.parseInt(arr[1]);
+		int day = Integer.parseInt(arr[2]);
+
+		System.out.printf("%02d-%02d-%04d", day, month, year);
 
 	}
 
