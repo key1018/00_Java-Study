@@ -116,13 +116,13 @@ public class CodeTest {
 		// 방법 2.
 		
 		System.out.print("날짜 : ");
-		String date = sc.nextLine();
+		String date2 = sc.nextLine();
 
-		String[] arr = date.split("\\.");
+		String[] arr2 = date2.split("\\.");
 
-		int year = Integer.parseInt(arr[0]);
-		int month = Integer.parseInt(arr[1]);
-		int day = Integer.parseInt(arr[2]);
+		int year = Integer.parseInt(arr2[0]);
+		int month = Integer.parseInt(arr2[1]);
+		int day = Integer.parseInt(arr2[2]);
 
 		System.out.printf("%02d-%02d-%04d", day, month, year);
 
