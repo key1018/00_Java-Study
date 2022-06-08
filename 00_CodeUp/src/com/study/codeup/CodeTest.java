@@ -76,7 +76,6 @@ public class CodeTest {
 		System.out.println("[" + num2 + "]");
 		System.out.println("[" + num + "]");
 		
-		*/
 		
 		// 1026번
 		System.out.print("시간(시/분/초) : ");
@@ -125,7 +124,21 @@ public class CodeTest {
 		int day = Integer.parseInt(arr2[2]);
 
 		System.out.printf("%02d-%02d-%04d", day, month, year);
-
+		*/
+		
+		// 1028번
+		
+		System.out.print("정수 : ");
+		long num = sc.nextLong();
+		
+		System.out.println(num);
+		
+		// 1029번
+		System.out.print("소수 : ");
+		double d = sc.nextDouble();
+		
+		System.out.printf("%.11f", d);
+		
 	}
 
 }
