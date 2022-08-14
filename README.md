@@ -1,2 +1,1 @@
-# 00_Java-Study
-JAVA STUDY
+# JAVA STUDY
