@@ -128,16 +128,31 @@ public class CodeTest {
 		
 		// 1028번
 		
-		System.out.print("정수 : ");
-		long num = sc.nextLong();
+//		System.out.print("정수 : ");
+//		long num = sc.nextLong();
+//		
+//		System.out.println(num);
+//		
+//		// 1029번
+//		System.out.print("소수 : ");
+//		double d = sc.nextDouble();
+//		
+//		System.out.printf("%.11f", d);
 		
-		System.out.println(num);
 		
-		// 1029번
-		System.out.print("소수 : ");
-		double d = sc.nextDouble();
+		// 1040번
+		System.out.print("숫자 입력 : ");
+		int num = sc.nextInt();
+		sc.nextLine();
 		
-		System.out.printf("%.11f", d);
+		System.out.printf("%d\n", -num);
+		
+		// 1041번
+		
+		System.out.print("영문자 입력 : ");
+		char ch = sc.nextLine().charAt(0);
+		
+		System.out.printf("%c", ch+1);
 		
 	}
 
